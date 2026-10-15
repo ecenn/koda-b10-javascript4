@@ -4,21 +4,17 @@ const nilaiOlahraga = [100, 100, 100]
 const nilai = [...nilaiMatematika, ...nilaiSejarah, ...nilaiOlahraga]
 const n = nilai.length
 
-let max = 0
-let min = 0
+let max = nilai[0]
+let min = nilai[0]
 let total = 0
 
 for (let i = 0; i < n; i++) {
-    let memory = nilai[i-1]
-    if (memory < 0) {
-        return
-    } else {
-        if (memory > nilai[i]) {
-            min = nilai[i]
-        }
-        if (memory < nilai[i]) {
-            max = nilai[i]
-        }
+    let memory = nilai[i]
+    if (memory < min) {
+        min = memory
+    }
+    if (memory > max) {
+        max = memory
     }
     total += nilai[i]
 }
