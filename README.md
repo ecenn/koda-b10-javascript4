@@ -10,7 +10,7 @@ Membuat program hitung nilai max, min, dan average
 
 ```mermaid
 
-flowchart TD
+flowchart LR
 
 start((start))
 stop(((stop)))
