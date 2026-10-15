@@ -15,11 +15,7 @@ flowchart LR
 start((start))
 stop(((stop)))
 
-mat[/nilaiMatematika/]
-seja[/nilaiSejarah/]
-olga[/nilaiOlahraga/]
-
-nilai["nilai = [...nilaiMatematika, ...nilaiSejarah, ...nilaiOlahraga]"]
+nilai[/"nilai = [...nilaiMatematika, ...nilaiSejarah, ...nilaiOlahraga]"/]
 
 n[n = nilai.length]
 
@@ -45,7 +41,7 @@ outAvg[/avg/]
 checkKecil{"memory < min"}
 checkBesar{"memory > max"}
 
-start --> mat --> seja --> olga --> nilai --> n --> max --> min --> total --> index --> checkIndex
+start --> nilai --> n --> max --> min --> total --> index --> checkIndex
 checkIndex --true--> memory --> checkKecil
 checkKecil --true--> inMin --> addTotal
 checkKecil --false--> checkBesar

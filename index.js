@@ -1,6 +1,6 @@
-const nilaiMatematika = [80, 85, 75]
-const nilaiSejarah = [98, 95, 93]
-const nilaiOlahraga = [100, 100, 100]
+const nilaiMatematika = [80, 70, 75]
+const nilaiSejarah = [90, 95, 93]
+const nilaiOlahraga = [80, 75, 80]
 const nilai = [...nilaiMatematika, ...nilaiSejarah, ...nilaiOlahraga]
 const n = nilai.length
 
@@ -12,8 +12,7 @@ for (let i = 0; i < n; i++) {
     let memory = nilai[i]
     if (memory < min) {
         min = memory
-    }
-    if (memory > max) {
+    } else if (memory > max) {
         max = memory
     }
     total += nilai[i]
