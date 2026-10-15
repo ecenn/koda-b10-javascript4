@@ -43,8 +43,8 @@ outMax[/max/]
 outAvg[/avg/]
 
 check1{memory < 0}
-checkKecil{memory < 0}
-checkBesar{memory < 0}
+checkKecil{"nilai[i] < memory"}
+checkBesar{"nilai[i] > memory"}
 
 start --> mat --> seja --> olga --> nilai --> n --> max --> min --> total --> index --> checkIndex
 checkIndex --true--> memory --> check1
