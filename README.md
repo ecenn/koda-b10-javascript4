@@ -10,12 +10,12 @@ Membuat program hitung nilai max, min, dan average
 
 ```mermaid
 
-flowchart LR
+flowchart TD
 
 start((start))
 stop(((stop)))
 
-nilai[/"nilai = [...nilaiMatematika, ...nilaiSejarah, ...nilaiOlahraga]"/]
+nilai[/"nilai = [numnber]"/]
 
 n[n = nilai.length]
 
@@ -51,3 +51,5 @@ addTotal --> incIndex --> checkIndex
 checkIndex --false--> avg --> outMax --> outMin --> outAvg --> stop
 
 ```
+
+[Link to Code 1](index.js)
