@@ -13,10 +13,10 @@ for (let i = 0; i < n; i++) {
     if (memory < 0) {
         return
     } else {
-        if (nilai[i] < memory) {
+        if (memory > nilai[i]) {
             min = nilai[i]
         }
-        if (nilai[i] > memory) {
+        if (memory < nilai[i]) {
             max = nilai[i]
         }
     }

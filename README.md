@@ -10,7 +10,7 @@ Membuat program hitung nilai max, min, dan average
 
 ```mermaid
 
-flowchart LR
+flowchart TD
 
 start((start))
 stop(((stop)))
@@ -26,13 +26,13 @@ n[n = nilai.length]
 index[i = 0]
 checkIndex{i < n}
 
-memory["memory = nilai[i-n]"]
+memory["memory = nilai[i]"]
 total[total = 0]
 
-max[max = 0]
-inMax["max = nilai[i]"]
-min[min = 0]
-inMin["min = nilai[i]"]
+max["max = nilai[0]"]
+inMax["max = memory"]
+min["min = nilai[0]"]
+inMin["min = memory"]
 avg[avg = total / n]
 
 incIndex[i++]
@@ -43,13 +43,11 @@ outMax[/max/]
 outAvg[/avg/]
 
 check1{memory < 0}
-checkKecil{"nilai[i] < memory"}
-checkBesar{"nilai[i] > memory"}
+checkKecil{"memory < min"}
+checkBesar{"memory > max"}
 
 start --> mat --> seja --> olga --> nilai --> n --> max --> min --> total --> index --> checkIndex
-checkIndex --true--> memory --> check1
-check1 --true--> addTotal
-check1 --false--> checkKecil
+checkIndex --true--> memory --> checkKecil
 checkKecil --true--> inMin --> addTotal
 checkKecil --false--> checkBesar
 checkBesar --true--> inMax --> addTotal
