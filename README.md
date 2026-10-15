@@ -10,7 +10,7 @@ Membuat program hitung nilai max, min, dan average
 
 ```mermaid
 
-flowchart TD
+flowchart LR
 
 start((start))
 stop(((stop)))
@@ -42,7 +42,6 @@ outMin[/min/]
 outMax[/max/]
 outAvg[/avg/]
 
-check1{memory < 0}
 checkKecil{"memory < min"}
 checkBesar{"memory > max"}
 
